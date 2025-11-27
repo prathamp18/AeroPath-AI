@@ -1,0 +1,16 @@
+# --- Dependencies ---
+node_modules/
+/backend/venv/
+__pycache__/
+
+# --- OS Files ---
+.DS_Store
+Thumbs.db
+
+# --- Environment Variables (SECRETS) ---
+.env
+.env.local
+
+# --- Build Outputs ---
+/frontend/build/
+dist/

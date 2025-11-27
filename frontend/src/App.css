@@ -1,0 +1,125 @@
+/* Glass Cockpit Theme */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body {
+  margin: 0;
+  background-color: #000;
+  color: #00ffcc;
+  font-family: 'Share Tech Mono', monospace; /* The "Pilot" Font */
+  overflow: hidden;
+}
+
+.cockpit-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* --- THE INPUT CONTROL PANEL --- */
+.fms-unit {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid #555;
+  padding: 15px;
+  z-index: 1000; /* Float above map */
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+input {
+  background: #111;
+  border: 1px solid #00ffcc;
+  color: #00ffcc;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.2rem;
+  width: 80px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+label {
+  color: #fbbf24; /* Amber */
+  font-size: 1rem;
+  align-self: center;
+}
+
+.btn-exec {
+  width: 100%;
+  background: #00ffcc;
+  color: black;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.2rem;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.btn-exec:hover { background: white; }
+
+/* --- DATA BLOCKS (HUD) --- */
+.data-block {
+  margin-top: 15px;
+  border-top: 1px solid #555;
+  padding-top: 10px;
+}
+
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+/* --- MAP LABELS (Waypoints) --- */
+/* --- THE WHITE BUBBLE LABELS --- */
+.waypoint-label {
+  background: transparent;
+  border: none;
+}
+
+.waypoint-text {
+  background-color: white; /* White Background like the reference */
+  color: #333; /* Dark Grey Text */
+  padding: 8px 12px;
+  border-radius: 20px; /* Rounded Pill Shape */
+  font-family: 'Helvetica', 'Arial', sans-serif; /* Clean Font */
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* Drop Shadow */
+  white-space: nowrap;
+  
+  /* Centering Logic */
+  position: absolute;
+  top: -15px; 
+  left: 50%;
+  transform: translateX(-50%);
+  
+  /* Add the little arrow triangle at the bottom */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.waypoint-text::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px 6px 0;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+/* Map Base */
+.leaflet-container {
+  background: #000 !important;
+}
