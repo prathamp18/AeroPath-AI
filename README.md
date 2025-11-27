@@ -46,11 +46,3 @@ It combines **A* Pathfinding**, **Spherical Geometry**, and **Machine Learning**
 * **AviationWeather.gov (NOAA):** Global SIGMET Polygons.
 * **Open-Meteo:** Historical training data for the ML engine.
 
----
-
-## ⚙️ Installation & Setup
-
-### 1. Clone the Repository
-```bash
-git clone [https://github.com/yourusername/aeropath-ai.git](https://github.com/yourusername/aeropath-ai.git)
-cd aeropath-ai
